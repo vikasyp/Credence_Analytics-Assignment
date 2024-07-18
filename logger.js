@@ -11,7 +11,9 @@ const logger = createLogger({
     new DailyRotateFile({
       filename: 'logs/application-%DATE%.log',
       datePattern: 'YYYY-MM-DD',
-      maxFiles: '14d'
+      zippedArchive: true, // Optionally compress rotated files
+      maxSize: '20m', // Maximum size of a single file
+      maxFiles: '14d' // Max duration before rotation
     })
   ]
 });
