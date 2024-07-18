@@ -1,26 +1,37 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv =require('dotenv')
+const dotenv = require('dotenv');
+const morgan = require('morgan');
 const seriesRoutes = require('./routes/seriesRoutes');
-const app = express();
-app.use(express.json());
+const logger = require('./logger'); // Assuming you have a logger
 
 dotenv.config();
 
-const PORT= process.env.PORT || 5001;
-const MONGOURL=process.env.MONGO_URL;
+const app = express();
+app.use(express.json());
+app.use(morgan('combined', { stream: logger.stream }));
 
-mongoose.connect(MONGOURL).then(() => {
-    console.log('Database connected successfully');
-app.listen(PORT , (err) => {
-    if(err){
-        console.log(e);
+const PORT = process.env.PORT || 5001;
+const MONGO_URL = process.env.MONGO_URL;
+
+mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    logger.info('Database connected successfully');
+    if (require.main === module) {
+      app.listen(PORT, () => {
+        logger.info(`Server is running on port: ${PORT}`);
+      });
     }
-    console.log(`server is running on port : ${PORT}`);
-})
-    
-}).catch(error=>console.log(error))
-
+  })
+  .catch(error => {
+    logger.error('Database connection error:', error);
+  });
 
 app.use('/api', seriesRoutes);
+
+app.use((err, req, res, next) => {
+  logger.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+module.exports = app;

@@ -1,0 +1,18 @@
+{"level":"info","message":"Database connected successfully","timestamp":"2024-07-18T09:49:10.862Z"}
+{"level":"info","message":"Series created successfully","series":{"__v":0,"_id":"6698e516df56bec277ac6903","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame_1","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-18T09:49:10.910Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:49:10 +0000] \"POST /api/series HTTP/1.1\" 201 235 \"-\" \"-\"","timestamp":"2024-07-18T09:49:10.920Z"}
+{"level":"info","message":"Series retrieved successfully","timestamp":"2024-07-18T09:49:10.957Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:49:10 +0000] \"GET /api/series HTTP/1.1\" 200 910 \"-\" \"-\"","timestamp":"2024-07-18T09:49:10.960Z"}
+{"level":"info","message":"Series updated successfully","series":{"__v":0,"_id":"6698e516df56bec277ac6903","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame_1","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-18T09:49:11.011Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:49:11 +0000] \"PUT /api/series/6698e516df56bec277ac6903 HTTP/1.1\" 200 235 \"-\" \"-\"","timestamp":"2024-07-18T09:49:11.017Z"}
+{"id":"6698e516df56bec277ac6903","level":"info","message":"Series deleted successfully","timestamp":"2024-07-18T09:49:11.059Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:49:11 +0000] \"DELETE /api/series/6698e516df56bec277ac6903 HTTP/1.1\" 200 41 \"-\" \"-\"","timestamp":"2024-07-18T09:49:11.062Z"}
+{"level":"info","message":"Database connected successfully","timestamp":"2024-07-18T09:50:07.671Z"}
+{"level":"info","message":"Series created successfully","series":{"__v":0,"_id":"6698e54f387ecdedbc504ad6","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame_1","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-18T09:50:07.717Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:50:07 +0000] \"POST /api/series HTTP/1.1\" 201 235 \"-\" \"-\"","timestamp":"2024-07-18T09:50:07.727Z"}
+{"level":"info","message":"Series retrieved successfully","timestamp":"2024-07-18T09:50:07.763Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:50:07 +0000] \"GET /api/series HTTP/1.1\" 200 910 \"-\" \"-\"","timestamp":"2024-07-18T09:50:07.767Z"}
+{"level":"info","message":"Series updated successfully","series":{"__v":0,"_id":"6698e54f387ecdedbc504ad6","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-18T09:50:07.810Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:50:07 +0000] \"PUT /api/series/6698e54f387ecdedbc504ad6 HTTP/1.1\" 200 233 \"-\" \"-\"","timestamp":"2024-07-18T09:50:07.813Z"}
+{"id":"6698e54f387ecdedbc504ad6","level":"info","message":"Series deleted successfully","timestamp":"2024-07-18T09:50:07.841Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Jul/2024:09:50:07 +0000] \"DELETE /api/series/6698e54f387ecdedbc504ad6 HTTP/1.1\" 200 41 \"-\" \"-\"","timestamp":"2024-07-18T09:50:07.844Z"}

@@ -5,6 +5,7 @@ const seriesController = require('../controllers/seriesController');
 router.post('/series', seriesController.createSeries);
 router.get('/series', seriesController.getAllSeries);
 router.put('/series/:id', seriesController.updateSeries);
+router.patch('/series/:id', seriesController.patchSeries);
 router.delete('/series/:id', seriesController.deleteSeries);
 
 module.exports = router;

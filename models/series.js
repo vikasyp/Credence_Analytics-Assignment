@@ -7,3 +7,4 @@ const seriesSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Series', seriesSchema);
+
