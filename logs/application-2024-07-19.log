@@ -1,0 +1,11 @@
+{"level":"info","message":"Database connected successfully","timestamp":"2024-07-19T09:50:12.607Z"}
+{"level":"info","message":"Series created successfully","series":{"__v":0,"_id":"669a36d46dd88216f8feeda8","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame_1","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-19T09:50:12.841Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jul/2024:09:50:12 +0000] \"POST /api/series HTTP/1.1\" 201 235 \"-\" \"-\"","timestamp":"2024-07-19T09:50:12.848Z"}
+{"level":"info","message":"Series retrieved successfully","timestamp":"2024-07-19T09:50:12.889Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jul/2024:09:50:12 +0000] \"GET /api/series HTTP/1.1\" 200 237 \"-\" \"-\"","timestamp":"2024-07-19T09:50:12.893Z"}
+{"level":"info","message":"Series retrieved successfully by ID","timestamp":"2024-07-19T09:50:12.920Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jul/2024:09:50:12 +0000] \"GET /api/series/669a36d46dd88216f8feeda8 HTTP/1.1\" 200 235 \"-\" \"-\"","timestamp":"2024-07-19T09:50:12.925Z"}
+{"level":"info","message":"Series updated successfully","series":{"__v":0,"_id":"669a36d46dd88216f8feeda8","img":"https://bit.ly/2Pzczlb","name":"Avengers: Endgame","summary":"Adrift in space with no food or water, Tony Stark sends amessage to Pepper Potts as his oxygen supply starts to dwindle."},"timestamp":"2024-07-19T09:50:12.960Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jul/2024:09:50:12 +0000] \"PUT /api/series/669a36d46dd88216f8feeda8 HTTP/1.1\" 200 233 \"-\" \"-\"","timestamp":"2024-07-19T09:50:12.963Z"}
+{"level":"info","message":"All series deleted successfully","timestamp":"2024-07-19T09:50:12.990Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jul/2024:09:50:12 +0000] \"DELETE /api/series HTTP/1.1\" 200 45 \"-\" \"-\"","timestamp":"2024-07-19T09:50:12.994Z"}

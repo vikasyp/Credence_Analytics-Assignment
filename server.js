@@ -14,7 +14,7 @@ app.use(morgan('combined', { stream: logger.stream }));
 const PORT = process.env.PORT || 5001;
 const MONGO_URL = process.env.MONGO_URL;
 
-mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URL) //{ useNewUrlParser: true, useUnifiedTopology: true }
   .then(() => {
     logger.info('Database connected successfully');
     if (require.main === module) {

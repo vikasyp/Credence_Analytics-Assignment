@@ -40,6 +40,21 @@ exports.getAllSeries = async (req, res) => {
   }
 };
 
+// get a series by ID
+exports.getSeriesById=async (req,res) => {
+  try {
+    const seriesbyID = await Series.findById(req.params.id);
+    if (!seriesbyID) {
+      logger.info(`No series found by ID :${seriesbyID}`);
+      return res.status(404).json({ message: "No Series found by ID" });
+    }
+    logger.info('Series retrieved successfully by ID');
+    res.status(200).send(seriesbyID);
+  } catch (error) {
+    logger.error('Error retrieving series by ID', { error: err.message });
+    res.status(500).json({ message: err.message });
+  }
+}
 // Update a series
 exports.updateSeries = async (req, res) => {
   try {
@@ -78,7 +93,7 @@ exports.patchSeries = async (req, res) => {
   }
 };
 
-// Delete a series
+// Delete a series by ID
 exports.deleteSeries = async (req, res) => {
   try {
     const id = req.params.id;
@@ -97,3 +112,21 @@ exports.deleteSeries = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+// all series Delete
+exports.deleteAllSeries = async (req, res) => {
+  try {
+    const series = await Series.find();
+    if (series.length === 0) {
+      logger.info('No series found');
+      return res.status(404).json({ message: "No series found" });
+    }
+
+    await Series.deleteMany();
+    logger.info('All series deleted successfully');
+    res.status(200).json({ message: 'All series deleted successfully' });
+  } catch (err) {
+    logger.error('Error deleting series', { error: err.message });
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+}

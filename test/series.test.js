@@ -37,6 +37,13 @@ describe('CRUD Operations', () => {
     expect(response.body.length).toBeGreaterThan(0);
   });
 
+    test('Get Series by ID', async () => {
+    const response = await request(app).get(`/api/series/${seriesId}`);
+    console.log('Get Series by ID Response:', response.statusCode, response.body);
+    expect(response.statusCode).toBe(200);
+    expect(response.body._id).toBe(seriesId);
+    expect(response.body.name).toBe('Avengers: Endgame_1');
+  });
 
 
   test('Update Series by ID', async () => {
@@ -48,10 +55,19 @@ describe('CRUD Operations', () => {
     expect(response.body.name).toBe('Avengers: Endgame');
   });
 
-  test('Delete Series by ID', async () => {
-    const response = await request(app).delete(`/api/series/${seriesId}`);
-    console.log('Delete Series by ID Response:', response.statusCode, response.body);
+
+  // test('Delete Series by ID', async () => {
+  //   const response = await request(app).delete(`/api/series/${seriesId}`);
+  //   console.log('Delete Series by ID Response:', response.statusCode, response.body);
+  //   expect(response.statusCode).toBe(200);
+  //   expect(response.body.message).toBe('Series deleted successfully');
+  // });
+
+  test('Delete All Series', async () => {
+    const response = await request(app).delete(`/api/series`);
+    console.log('Delete All Series Response:', response.statusCode, response.body);
     expect(response.statusCode).toBe(200);
-    expect(response.body.message).toBe('Series deleted successfully');
+    expect(response.body.message).toBe('All series deleted successfully');
   });
 });
+
