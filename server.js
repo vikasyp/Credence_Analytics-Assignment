@@ -6,7 +6,7 @@ const seriesRoutes = require('./routes/seriesRoutes');
 const logger = require('./logger'); // Assuming you have a logger
 
 
-
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(morgan('combined', { stream: logger.stream }));
